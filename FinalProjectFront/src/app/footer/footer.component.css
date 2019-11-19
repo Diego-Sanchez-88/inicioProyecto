@@ -1,0 +1,14 @@
+footer{
+    display:inline-block;
+    margin: 2px 60px 2px 45px;
+    background-color:#aaa;
+    box-shadow:0 1px 1px #ccc;
+    border-radius:2px;
+    width: 100%;
+    text-align: right;
+    
+}
+
+.container{
+    height: 10px;
+}
