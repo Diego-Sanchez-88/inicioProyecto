@@ -20,7 +20,7 @@ a:hover{
 
 nav{
     display:inline-block;
-    margin: 2px 60px 2px 45px;
+    margin: 2px 0 2px 0;
     background-color:#aaa;
     box-shadow:0 1px 1px #ccc;
     border-radius:2px;

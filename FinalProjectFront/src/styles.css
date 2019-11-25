@@ -1,3 +1,7 @@
-body{
-  background-color: black;
+body {
+  background: url(../src/images/glass.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
 }
+

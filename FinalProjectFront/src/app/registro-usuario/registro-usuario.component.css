@@ -1,0 +1,17 @@
+.container{
+    width: 100%;
+}
+
+#generos{
+    color: white;
+    margin: 0 auto;
+}
+
+#generos input{
+    display: inline;
+    margin: 0 auto;
+}
+
+form div input{
+    margin: 0 auto;
+}
