@@ -11,14 +11,14 @@
   text-align: center;
 }
 
-.citadiaria{
+#citadiaria{
   height: 300px;
   width: 550px;
   background-color: gray;
   opacity:0.5; 
   float: right;
-  margin: 60px;
-  padding: 10px;
+  margin: 80px 20px;
+  padding: 20px;
   font-style: italic;
   font-family: 'Courier New', Courier, monospace;
   color: black;
@@ -30,8 +30,5 @@
   height: 100vh;
 }
 
-/* #contenido img{
-  background-image: url('/images/glasscopia.png');
-  height: 400px;
-} */
+
 

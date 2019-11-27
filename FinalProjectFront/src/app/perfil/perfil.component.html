@@ -1,0 +1,54 @@
+<div class="container">
+
+    <div class="perfilUsuario">
+        <div class="image">
+            <img src="../../assets/usuario_pulpo.png" alt="usuario_pulpo">
+        </div>
+        <br>
+        <h5>Nombre</h5>
+        <h5>Username</h5>
+        <h5>E-mail</h5>
+        <h5>Edad</h5>
+        <h5>Géneros</h5>
+        <h6>Terror</h6>
+        <h6>Romántico</h6>
+        <h6>Novela</h6>
+
+        <button>EDITAR PERFIL</button>
+    </div>
+
+    <div class="relatosUsuario">
+        <div>
+            <h2>MIS RELATOS</h2>
+        </div>
+        <div>
+            <!-- esto está en los primeros ejercicios -->
+            <a (click)="onSubirRelato()">Subir relato</a>
+            <p *ngIf="mostrarTextArea">
+                <br>
+                <app-text-area></app-text-area>
+            </p>
+            <!-- meter aquí un app de un componente "text area", es decir, crear el componente para escribir el relato que tendrá el botón de guardar y enviar ese relato al array relatos de cada usuario......... -> ¡¡ HECHO !! -->
+            <!-- Ahora hay que hacer que cuando salga el text area se oculte el componente de mis relatos. -->
+            <!-- DUDA: MISRELATOS son perennes o se ocultan autom. al salir el textarea?? -->
+        </div>
+
+        <div class="relatos">
+            <button class="accordion">Section 1</button>
+            <div class="panel">
+                <p>Lorem ipsum...</p>
+            </div>
+
+            <button class="accordion">Section 2</button>
+            <div class="panel">
+                <p>Lorem ipsum...</p>
+            </div>
+
+            <button class="accordion">Section 3</button>
+            <div class="panel">
+                <p>Lorem ipsum...</p>
+            </div>
+        </div>
+
+    </div>
+</div>

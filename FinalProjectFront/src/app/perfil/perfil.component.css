@@ -1,0 +1,81 @@
+.container{
+    display: flex;
+}
+
+.image{
+    text-align: center;
+}
+
+img{
+    border-radius: 50%;
+    width: 100px;
+    height: auto;
+}
+
+.perfilUsuario{
+    width: 200px;
+    height: 500px;
+    margin: 50px;
+    padding: 20px;
+    background-color: burlywood;
+    float: left;
+    border-radius: 5px;
+    background: rgba(126, 98, 98, 0.5);
+    color: wheat;
+}
+
+h6{
+    margin-left: 20px;
+}
+
+.relatosUsuario{
+    width: 800px;
+    height: 600px;
+    margin: 30px;
+    padding: 60px;
+    background-color: burlywood;
+    float: right;
+    border-radius: 5px;
+    background: rgba(126, 98, 98, 0.5);
+    color: wheat;
+}
+
+.relatosUsuario h2{
+    text-align: center;
+}
+
+.btnSubirRelato{
+    padding: 10px 24px;
+    border-radius: 8px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    float: right;
+}
+
+.btnSubirRelato:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}

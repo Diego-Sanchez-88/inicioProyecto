@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +10,10 @@ import { LeerRelatosComponent } from './leer-relatos/leer-relatos.component';
 import { MenuComponent } from './menu/menu.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { LoginComponent } from './login/login.component';
+import { PerfilComponent } from './perfil/perfil.component';
+import { RelatoNuevoComponent } from './relato-nuevo/relato-nuevo.component';
+import { TextAreaComponent } from './text-area/text-area.component';
 
 @NgModule({
   declarations: [
@@ -19,11 +23,16 @@ import { FooterComponent } from './footer/footer.component';
     LeerRelatosComponent,
     MenuComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent,
+    PerfilComponent,
+    RelatoNuevoComponent,
+    TextAreaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     ReactiveFormsModule
   ],
   providers: [],
