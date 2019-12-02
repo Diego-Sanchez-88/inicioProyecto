@@ -26,6 +26,7 @@ export class RegistroUsuarioComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.formulario.value);
+    // console.log(this.formulario.value);
+    this.datosService.nuevoUsuario(this.formulario.value);
   }
 }

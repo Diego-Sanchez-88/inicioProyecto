@@ -26,29 +26,14 @@
             <a (click)="onSubirRelato()">Subir relato</a>
             <p *ngIf="mostrarTextArea">
                 <br>
-                <app-text-area></app-text-area>
+                <app-relato-nuevo></app-relato-nuevo>
             </p>
+            <app-acordeon-relatos *ngIf="!mostrarTextArea"></app-acordeon-relatos>
             <!-- meter aquí un app de un componente "text area", es decir, crear el componente para escribir el relato que tendrá el botón de guardar y enviar ese relato al array relatos de cada usuario......... -> ¡¡ HECHO !! -->
             <!-- Ahora hay que hacer que cuando salga el text area se oculte el componente de mis relatos. -->
-            <!-- DUDA: MISRELATOS son perennes o se ocultan autom. al salir el textarea?? -->
+            <!-- DUDA: MISRELATOS son perennes o se ocultan autom. al salir el textarea?? Respuesta: se quedan ahí..... -->
         </div>
 
-        <div class="relatos">
-            <button class="accordion">Section 1</button>
-            <div class="panel">
-                <p>Lorem ipsum...</p>
-            </div>
-
-            <button class="accordion">Section 2</button>
-            <div class="panel">
-                <p>Lorem ipsum...</p>
-            </div>
-
-            <button class="accordion">Section 3</button>
-            <div class="panel">
-                <p>Lorem ipsum...</p>
-            </div>
-        </div>
 
     </div>
 </div>

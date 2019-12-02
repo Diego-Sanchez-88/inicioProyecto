@@ -17,10 +17,10 @@ img{
     height: 500px;
     margin: 50px;
     padding: 20px;
-    background-color: burlywood;
+    /* background-color: burlywood; */
     float: left;
     border-radius: 5px;
-    background: rgba(126, 98, 98, 0.5);
+    background: rgba(0, 0, 0, 0.5);
     color: wheat;
 }
 
@@ -33,10 +33,10 @@ h6{
     height: 600px;
     margin: 30px;
     padding: 60px;
-    background-color: burlywood;
+    /* background-color: burlywood; */
     float: right;
     border-radius: 5px;
-    background: rgba(126, 98, 98, 0.5);
+    background: rgba(0, 0, 0, 0.5);
     color: wheat;
 }
 
@@ -57,25 +57,3 @@ h6{
   color: white;
 }
 
-.accordion {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  text-align: left;
-  border: none;
-  outline: none;
-  transition: 0.4s;
-}
-
-.active, .accordion:hover {
-  background-color: #ccc;
-}
-
-.panel {
-  padding: 0 18px;
-  background-color: white;
-  display: none;
-  overflow: hidden;
-}

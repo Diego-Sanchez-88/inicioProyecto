@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,7 +14,7 @@ import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { RelatoNuevoComponent } from './relato-nuevo/relato-nuevo.component';
-import { TextAreaComponent } from './text-area/text-area.component';
+import { AcordeonRelatosComponent } from './acordeon-relatos/acordeon-relatos.component';
 
 @NgModule({
   declarations: [
@@ -27,13 +28,14 @@ import { TextAreaComponent } from './text-area/text-area.component';
     LoginComponent,
     PerfilComponent,
     RelatoNuevoComponent,
-    TextAreaComponent
+    AcordeonRelatosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

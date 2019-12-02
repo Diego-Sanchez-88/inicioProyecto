@@ -9,6 +9,7 @@ export class PerfilComponent implements OnInit {
 
   mostrarTextArea: boolean;
 
+
   constructor() {
     this.mostrarTextArea = false;
   }

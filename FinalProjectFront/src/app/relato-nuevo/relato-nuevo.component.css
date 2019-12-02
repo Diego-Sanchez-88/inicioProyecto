@@ -1,0 +1,10 @@
+textarea{
+    width: 640px;
+    height: 300px;
+    border: 2px solid wheat;
+}
+
+button{
+    float: right;
+    margin: 20px;
+}
