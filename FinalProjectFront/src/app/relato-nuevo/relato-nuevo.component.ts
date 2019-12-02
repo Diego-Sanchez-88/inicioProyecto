@@ -23,7 +23,7 @@ export class RelatoNuevoComponent implements OnInit {
   }
 
   onSubmit() {
-    // console.log(this.formulario.value);
-    this.datosService.nuevoUsuario(this.formulario.value);
+    console.log(this.formulario.value);
+    this.datosService.nuevoRelato(this.formulario.value);
   }
 }

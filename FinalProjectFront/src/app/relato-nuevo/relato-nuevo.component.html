@@ -1,4 +1,4 @@
-<form action="" method="POST">
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
     <div class="form-group">
         <label>Título del relato</label>
         <input type="text" class="form-control" formControlName="titulo">
@@ -10,7 +10,7 @@
         <label>Etiquetas (máximo cuatro etiquetas)</label>
         <input type="text" class="form-control" formControlName="etiquetas">
     </div>
-    <div class="submit" id="btnSubirRelato">
+    <div id="btnSubirRelato">
         <button type="submit" value="Guardar relato" id="form_button">Guardar</button>
     </div>
 </form>
