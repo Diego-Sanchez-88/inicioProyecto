@@ -9,10 +9,12 @@ export class DatosService {
 
   baseUrl: string;
   baseUrlNewText: string;
+  baseUrlLogin: string;
 
   constructor(private http: HttpClient) {
     this.baseUrl = 'http://localhost:3000/api/usuario/registro';
     this.baseUrlNewText = 'http://localhost:3000/api/relato/relatoGuardado';
+    this.baseUrlLogin = 'http://localhost:3000/api/usuario/login';
   }
 
   nuevoUsuario(values): Promise<any> {
@@ -21,6 +23,11 @@ export class DatosService {
 
   nuevoRelato(values): Promise<any> {
     return this.http.post(this.baseUrlNewText, values).toPromise();
+  }
+
+  loginUsuario(values) {
+    console.log(values);
+    return this.http.post(this.baseUrlLogin, values).toPromise();
   }
 
 }

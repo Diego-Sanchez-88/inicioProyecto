@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DatosService } from '../datos.service';
 import { FormGroup, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registro-usuario',
@@ -11,7 +12,7 @@ export class RegistroUsuarioComponent implements OnInit {
 
   formulario: FormGroup;
 
-  constructor(private datosService: DatosService) {
+  constructor(private datosService: DatosService, private router: Router) {
     this.formulario = new FormGroup({
       nombre: new FormControl(''),
       username: new FormControl(''),
@@ -26,7 +27,10 @@ export class RegistroUsuarioComponent implements OnInit {
   }
 
   onSubmit() {
-    // console.log(this.formulario.value);
-    this.datosService.nuevoUsuario(this.formulario.value);
+    // console.log(this.formulario.value); // --> funciona en terminal navegador
+    this.datosService.nuevoUsuario(this.formulario.value)
+      .then(res => {
+        this.router.navigate(['/login']);
+      });
   }
 }

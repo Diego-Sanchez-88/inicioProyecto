@@ -8,14 +8,22 @@ import { DatosService } from '../datos.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private datosService: DatosService) { }
+  loginIncorrecto: boolean;
+
+  constructor(private datosService: DatosService) {
+    this.loginIncorrecto = false;
+  }
 
   ngOnInit() {
   }
 
-  // onSubmit(formValue) {
-  //   // console.log(formvValue);
-
-  // }
+  onSubmit(values) {
+    // console.log(values); // funciona en el terminal de navegador
+    this.datosService.loginUsuario(values)
+      // console.log(values);
+      .then((res) => {
+        console.log(res);
+      });
+  }
 }
 

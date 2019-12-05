@@ -4,6 +4,7 @@ import { RegistroUsuarioComponent } from './registro-usuario/registro-usuario.co
 import { MenuComponent } from './menu/menu.component';
 import { LoginComponent } from './login/login.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { LeerRelatosComponent } from './leer-relatos/leer-relatos.component';
 
 
 
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: 'home', component: MenuComponent },
   { path: 'registro-usuario', component: RegistroUsuarioComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'perfil', component: PerfilComponent }
+  { path: 'perfil', component: PerfilComponent },
+  { path: 'leer-relatos', component: LeerRelatosComponent }
 ];
 
 @NgModule({

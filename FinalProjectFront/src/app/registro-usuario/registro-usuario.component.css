@@ -5,6 +5,11 @@
 #generos{
     /* color: white; */
     margin: 0 auto;
+    color: white;
+}
+
+#generos_label{
+    color: black;
 }
 
 #generos input{
@@ -41,4 +46,8 @@ form div label{
 
 textarea{
     width: 100%;
+}
+
+.form input{
+    border-radius: 10px;
 }
