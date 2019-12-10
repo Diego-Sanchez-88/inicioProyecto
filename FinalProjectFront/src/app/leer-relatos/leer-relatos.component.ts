@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DatosService } from '../datos.service';
 
 @Component({
   selector: 'app-leer-relatos',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LeerRelatosComponent implements OnInit {
 
-  constructor() { }
+  arrRelatos: any[];
+
+  constructor(private datosService: DatosService) {
+    this.arrRelatos = [];
+  }
 
   ngOnInit() {
+    this.datosService.getAllRelatos()
+      .then(response => {
+        console.log(response); // --> funciona en el terminal web
+        this.arrRelatos = response;
+      });
   }
+
 
 }

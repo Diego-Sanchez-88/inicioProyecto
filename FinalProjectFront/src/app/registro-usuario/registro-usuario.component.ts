@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DatosService } from '../datos.service';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -14,14 +14,19 @@ export class RegistroUsuarioComponent implements OnInit {
 
   constructor(private datosService: DatosService, private router: Router) {
     this.formulario = new FormGroup({
-      nombre: new FormControl(''),
-      username: new FormControl(''),
-      email: new FormControl(''),
-      edad: new FormControl(''),
-      generos: new FormControl(''),
+      nombre: new FormControl('', [Validators.required]),
+      username: new FormControl('', [Validators.required]),
+      email: new FormControl('', [
+        Validators.pattern(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)
+      ]),
+      edad: new FormControl('', [Validators.required]),
+      // generos: new FormControl(''),
       message: new FormControl(''),
-      password: new FormControl('')
-    });
+      password: new FormControl(''),
+      repite_password: new FormControl(''),
+    },
+      [this.passwordValidator]
+    );
   }
   ngOnInit() {
   }
@@ -32,5 +37,16 @@ export class RegistroUsuarioComponent implements OnInit {
       .then(res => {
         this.router.navigate(['/login']);
       });
+  }
+
+  passwordValidator(form: FormGroup) {
+    const passwordControl = form.controls['password'];
+    const repitePasswordControl = form.controls['repite_password'];
+
+    if (passwordControl.value === repitePasswordControl.value) {
+      return null;
+    } else {
+      return { passwordvalidator: true };
+    }
   }
 }
