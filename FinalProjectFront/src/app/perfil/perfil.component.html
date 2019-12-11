@@ -3,18 +3,23 @@
     <div class="perfilUsuario">
         <div class="image">
             <img src="../../assets/usuario_pulpo.png" alt="usuario_pulpo">
+            <!-- <img src="{{ usuario.imagen }}" alt="usuario_pulpo"> -->
         </div>
-        <br>
-        <h5>Nombre</h5>
-        <h5>Username</h5>
-        <h5>E-mail</h5>
-        <h5>Edad</h5>
-        <h5>Géneros</h5>
+
+        <h5>Nombre: {{ usuario.nombre }}</h5>
+        <h5>Username: {{ usuario.username }}</h5>
+        <h5>E-mail: {{ usuario.email }}</h5>
+        <h5>Edad: {{ usuario.edad }}</h5>
+        <h5>Géneros:</h5>
         <h6>Terror</h6>
         <h6>Romántico</h6>
         <h6>Novela</h6>
 
         <button>EDITAR PERFIL</button>
+        <br>
+        <hr>
+        <br>
+        <button>LOGOUT</button>
     </div>
 
     <div class="relatosUsuario">
@@ -33,7 +38,5 @@
             <!-- Ahora hay que hacer que cuando salga el text area se oculte el componente de mis relatos. -->
             <!-- DUDA: MISRELATOS son perennes o se ocultan autom. al salir el textarea?? Respuesta: se quedan ahí..... -->
         </div>
-
-
     </div>
 </div>

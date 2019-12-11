@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DatosService } from '../datos.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,7 @@ export class LoginComponent implements OnInit {
 
   loginIncorrecto: boolean;
 
-  constructor(private datosService: DatosService) {
+  constructor(private datosService: DatosService, private router: Router) {
     this.loginIncorrecto = false;
   }
 
@@ -22,8 +23,18 @@ export class LoginComponent implements OnInit {
     this.datosService.loginUsuario(values)
       // console.log(values);
       .then((res) => {
-        console.log(res);
+        // console.log(res);
+        if (res['error']) {
+          alert(res['error']);
+        } else {
+          localStorage.setItem('user-token', res['success']);
+          // alert('login correcto');
+          this.router.navigate(['/perfil']);
+        }
+      }).catch(err => {
+        console.log(err);
       });
   }
 }
+
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DatosService } from '../datos.service';
 
 @Component({
   selector: 'app-perfil',
@@ -8,13 +9,18 @@ import { Component, OnInit } from '@angular/core';
 export class PerfilComponent implements OnInit {
 
   mostrarTextArea: boolean;
+  usuario: string;
 
-
-  constructor() {
+  constructor(private datosService: DatosService) {
     this.mostrarTextArea = false;
   }
 
   ngOnInit() {
+    this.datosService.getUsuario()
+      .then(response => {
+        // console.log(response);
+        this.usuario = response;
+      });
   }
 
   onSubirRelato() {
