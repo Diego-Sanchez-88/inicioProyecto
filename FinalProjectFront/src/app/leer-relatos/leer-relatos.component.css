@@ -6,13 +6,7 @@
     position: absolute;
 } */
 
-.scroll-container{
-    overflow-y: scroll;
-    height: 600px;
-    margin: 0 20px 0 20px;
-    /* opacity: 0.6; */
-    position: relative;
-}
+
 
 .row{
     text-align: center;
@@ -26,11 +20,12 @@ background-color: white;
 filter: alpha(opacity=100);
 opacity: 1;
 text-align: left;
-height: 200px;
+height: 300px;
 }
 
 h3{
     font-size: large;
+    text-align: center;
 }
 
 p{
@@ -40,4 +35,7 @@ p{
 h6{
     font-style: oblique;
     font-size: small;
+    position: absolute;
+    right: 50px;
+    bottom: 10px;   
 }

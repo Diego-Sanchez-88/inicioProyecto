@@ -1,13 +1,14 @@
 <div class="container-fluid">
-    <div class="scroll-container">
-        <div class="row">
-            <div class="col-md-4" *ngFor="let relato of arrRelatos">
-                <div class="wrapper-relato">
-                    <h3>{{ relato.titulo }}</h3>
-                    <p>{{ relato.texto }}</p>
-                    <h6>{{ relato.etiquetas }}</h6>
-                </div>
+
+    <div class="row">
+        <div class="col-md-4" *ngFor="let relato of arrRelatos">
+            <div class="wrapper-relato">
+                <h3>{{ relato.titulo }}</h3>
+                <hr>
+                <p>{{ relato.texto }}</p>
+                <h6>{{ relato.etiquetas }}</h6>
             </div>
         </div>
     </div>
+
 </div>

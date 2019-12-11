@@ -6,16 +6,28 @@
             <!-- <img src="{{ usuario.imagen }}" alt="usuario_pulpo"> -->
         </div>
 
-        <h5>Nombre: {{ usuario.nombre }}</h5>
-        <h5>Username: {{ usuario.username }}</h5>
-        <h5>E-mail: {{ usuario.email }}</h5>
-        <h5>Edad: {{ usuario.edad }}</h5>
+        <!-- <h5>Nombre: <br>{{ usuario.nombre }}</h5>
+        <h5>Username: <br>{{ usuario.username }}</h5>
+        <h5>E-mail: <br>{{ usuario.email }}</h5>
+        <h5>Edad: <br>{{ usuario.edad }} años</h5>
         <h5>Géneros:</h5>
         <h6>Terror</h6>
         <h6>Romántico</h6>
-        <h6>Novela</h6>
-
-        <button>EDITAR PERFIL</button>
+        <h6>Novela</h6> -->
+        Nombre:
+        <h5>{{ usuario.nombre }}</h5>
+        Username:
+        <h5>{{ usuario.username }}</h5>
+        E-mail:
+        <h5>{{ usuario.email }}</h5>
+        Edad:
+        <h5>{{ usuario.edad }} años</h5>
+        Géneros:
+        <br>
+        <button type="button" [routerLink]="['/editar-perfil']">EDITAR PERFIL</button>
+        <div class="submit" id="btnRegistro">
+            <input type="submit" value="editar perfil" id="form_button" />
+        </div>
         <br>
         <hr>
         <br>
@@ -27,12 +39,13 @@
             <h2>MIS RELATOS</h2>
         </div>
         <div>
-            <!-- esto está en los primeros ejercicios -->
-            <a (click)="onSubirRelato()">Subir relato</a>
+            <button type="button" (click)="onSubirRelato()">Subir relato</button>
+            <br>
             <p *ngIf="mostrarTextArea">
                 <br>
                 <app-relato-nuevo></app-relato-nuevo>
             </p>
+            <br>
             <app-acordeon-relatos *ngIf="!mostrarTextArea"></app-acordeon-relatos>
             <!-- meter aquí un app de un componente "text area", es decir, crear el componente para escribir el relato que tendrá el botón de guardar y enviar ese relato al array relatos de cada usuario......... -> ¡¡ HECHO !! -->
             <!-- Ahora hay que hacer que cuando salga el text area se oculte el componente de mis relatos. -->

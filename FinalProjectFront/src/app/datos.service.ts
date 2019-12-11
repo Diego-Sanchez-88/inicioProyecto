@@ -8,10 +8,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class DatosService {
 
   baseUrl: string;
-  baseUrlNewText: string;
-  baseUrlLogin: string;
   baseUrlRelatos: string;
-  baseUrlUsuarioRelatos: string;
+
 
   constructor(private http: HttpClient) {
     this.baseUrl = 'http://localhost:3000/api/';

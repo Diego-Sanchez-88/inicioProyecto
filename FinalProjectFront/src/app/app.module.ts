@@ -14,6 +14,7 @@ import { LoginComponent } from './login/login.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { RelatoNuevoComponent } from './relato-nuevo/relato-nuevo.component';
 import { AcordeonRelatosComponent } from './acordeon-relatos/acordeon-relatos.component';
+import { EditarPerfilComponent } from './editar-perfil/editar-perfil.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AcordeonRelatosComponent } from './acordeon-relatos/acordeon-relatos.co
     LoginComponent,
     PerfilComponent,
     RelatoNuevoComponent,
-    AcordeonRelatosComponent
+    AcordeonRelatosComponent,
+    EditarPerfilComponent
   ],
   imports: [
     BrowserModule,
