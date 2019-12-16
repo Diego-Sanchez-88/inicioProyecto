@@ -9,7 +9,7 @@
 
 img{
     border-radius: 50%;
-    width: 100px;
+    width: 150px;
     height: auto;
 }
 
@@ -31,7 +31,7 @@ h6{
 }
 
 .relatosUsuario{
-    min-width: 800px;
+    min-width: 850px;
     min-height: 600px;
     margin: 30px;
     padding: 60px;
@@ -62,4 +62,5 @@ h6{
 hr{
     background-color: gainsboro;
 }
+
 

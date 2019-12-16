@@ -15,12 +15,22 @@ export class AcordeonRelatosComponent implements OnInit {
   }
 
   async ngOnInit() {
+    // console.log('entra?');
     // this.datosService.getRelatosUsuario()
     //   .then(response => {
     //     console.log(response);
     //     // esto funciona en GET  http://localhost:3000/api/usuario/23/relatos
     this.arrRelatosUsuario = await this.datosService.getRelatosUsuario();
-    console.log(this.arrRelatosUsuario);
+    // console.log(this.arrRelatosUsuario);
+  }
+
+  async onSubmit(pRelatoId) {
+    // console.log('hola');
+    // console.log(pRelatoId);
+    await this.datosService.borrarRelato(pRelatoId);
+    // console.log(response);
+    this.arrRelatosUsuario = await this.datosService.getRelatosUsuario();
+    // console.log(this.arrRelatosUsuario);
   }
 }
 

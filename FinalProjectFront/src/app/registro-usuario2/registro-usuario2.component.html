@@ -1,0 +1,77 @@
+<div class="container">
+    <div class="d-flex justify-content-center h-100">
+        <div class="card">
+            <div class="card-header">
+                <h3>Formulario de registro</h3>
+            </div>
+            <div class="card-body">
+                <form [formGroup]="formulario" (ngSubmit)="onSubmit(formulario.value)" class="form" id="contact_form">
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Nombre" formControlName="nombre"
+                            id="name_input" required>
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Username" formControlName="username"
+                            id="username_input" required>
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                        </div>
+                        <input type="email" class="form-control" placeholder="E-mail" formControlName="email"
+                            id="email_input" required>
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="number" class="form-control" placeholder="Edad" formControlName="edad"
+                            id="edad_input" required>
+                    </div>
+                    <div class="input-group form-group">
+                        <!-- <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div> -->
+
+                        <textarea name="message" placeholder="Breve descripción" id="message_input" cols="30"
+                            rows="5"></textarea>
+
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="password" class="form-control" formControlName="password" placeholder="Password"
+                            id="password_input" required>
+
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="password" class="form-control" formControlName="repite_password"
+                            placeholder="Repite password" id="repite_password_input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Guardar" class="btn float-right guardar_btn"
+                            [disabled]="!formulario.valid">
+                        <!-- Preguntar si el disabled es correcto -->
+                    </div>
+
+                    <div *ngIf="loginIncorrecto" class="d-flex justify-content-center links">
+                        Username/password incorrecto.
+                        <!-- ESTO NO TENGO NI PUTA IDEA DE CÓMO PONERLO -->
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="usuario">
 
     <div class="perfilUsuario">
         <div class="image">
@@ -24,16 +24,17 @@
         <h5>{{ usuario.edad }} años</h5>
         Géneros:
         <br>
-        <button type="button" [routerLink]="['/editar-perfil']">EDITAR PERFIL</button>
+        <!-- <button type="button" [routerLink]="['/editar-perfil']">EDITAR PERFIL</button> -->
         <div class="submit" id="btnRegistro">
-            <input type="submit" value="editar perfil" id="form_button" />
+            <div class="submit" id="btnRegistro">
+                <input type="submit" value="editar perfil" id="form_button" [routerLink]="['/edit-perf-prueba']" />
+            </div>
+            <br>
+            <hr>
+            <br>
+            <button type="button" (click)="cerrarSesion()">CERRAR SESIÓN</button>
         </div>
-        <br>
-        <hr>
-        <br>
-        <button>LOGOUT</button>
     </div>
-
     <div class="relatosUsuario">
         <div>
             <h2>MIS RELATOS</h2>
@@ -41,12 +42,13 @@
         <div>
             <button type="button" (click)="onSubirRelato()">Subir relato</button>
             <br>
-            <p *ngIf="mostrarTextArea">
+            <router-outlet></router-outlet>
+            <!-- <p *ngIf="mostrarTextArea">
                 <br>
                 <app-relato-nuevo></app-relato-nuevo>
             </p>
             <br>
-            <app-acordeon-relatos *ngIf="!mostrarTextArea"></app-acordeon-relatos>
+            <app-acordeon-relatos *ngIf="!mostrarTextArea"></app-acordeon-relatos> -->
             <!-- meter aquí un app de un componente "text area", es decir, crear el componente para escribir el relato que tendrá el botón de guardar y enviar ese relato al array relatos de cada usuario......... -> ¡¡ HECHO !! -->
             <!-- Ahora hay que hacer que cuando salga el text area se oculte el componente de mis relatos. -->
             <!-- DUDA: MISRELATOS son perennes o se ocultan autom. al salir el textarea?? Respuesta: se quedan ahí..... -->

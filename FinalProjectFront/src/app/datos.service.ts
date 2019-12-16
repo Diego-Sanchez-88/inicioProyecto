@@ -61,8 +61,17 @@ export class DatosService {
     return this.http.get<any>(`${this.baseUrl}usuario`, httpOptions).toPromise();
   }
 
-
-
+  borrarRelato(pRelatoId): Promise<any> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'user-token': localStorage.getItem('user-token')
+      })
+    };
+    return this.http.post(`${this.baseUrl}relato/borrar`, { id: pRelatoId }, httpOptions).toPromise();
+  }
 }
+
+
+
 
 

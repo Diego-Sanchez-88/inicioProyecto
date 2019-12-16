@@ -1,14 +1,98 @@
 <div class="container-fluid">
-
-    <div class="row">
-        <div class="col-md-4" *ngFor="let relato of arrRelatos">
-            <div class="wrapper-relato">
-                <h3>{{ relato.titulo }}</h3>
-                <hr>
-                <p>{{ relato.texto }}</p>
-                <h6>{{ relato.etiquetas }}</h6>
-            </div>
+    <div class="buscadores">
+        <div class="buscarPorGenero">
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="buscarPorGenero" aria-label="Search">
+                <button class="btn float-right search_btn my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+        <div class="buscarPorPalabraClave">
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="buscarPorPalabraClave"
+                    aria-label="Search">
+                <button class="btn float-right search_btn my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+        <div class="buscarPorUsername">
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="buscarPorUsername" aria-label="Search">
+                <button class="btn float-right search_btn my-2 my-sm-0" type="submit">Search</button>
+            </form>
         </div>
     </div>
 
+    <div class="containerRow">
+        <div class="row">
+            <div class="col-md-3" *ngFor="let relato of arrRelatos, let i= index">
+                <div class="wrapper-relato mb-2">
+                    <h3>{{ relato.titulo }}</h3>
+                    <hr>
+                    <p class="card-body">{{ relato.texto }}</p>
+                    <!-- a estos p hay que darles un estilo de medida fija, un alto fijo, y todo lo que salga de este alto hay que darle un overflow: hidden . Limitar los caracteres en lugar de con el alto.-->
+                    <a href="" data-toggle="modal" [attr.data-target]="'#mimodal'+i">Leer más/Seguir leyendo</a>
+                    <div class="etiquetas">
+                        <h6>Etiquetas: {{ relato.etiquetas }}</h6>
+                    </div>
+                </div>
+
+
+                <!-- Modal -->
+                <div class="modal fade" [attr.id]="'mimodal'+i" tabindex="-1" role="dialog"
+                    [attr.aria-labelledby]="'mimodalLabel'+i" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" [attr.id]="'mimodalLabel'+i">{{ relato.titulo }}</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                {{ relato.texto }}
+                            </div>
+                            <div class="modal-footer">
+                                Autor/a: {{ relato.fk_usuario }}
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scrollBtn">
+        <button (click)="subirArriba()" id="scrollBtn" title="Go to top">Top</button>
+    </div>
+    <!-- -------------------------------------------------------------------------------------------------------------------------- -->
+    <!-- --------------------------------------------------------------------------------------------------------------------------- -->
+    <!-- --------------------------------------------------------------------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------------------------------------------------------------------- -->
+    <!-- --------------------------------------------------------------------------------------------------------------------------- -->
+    <!-- -------------------------------------------------LAS CARDS--------------------------------------------------------------- -->
+
+    <!-- <div class="card" style="width: 18rem;" *ngFor="let relato of arrRelatos, let i= index">
+        <div class="card-body">
+            <h5 class="card-title">{{relato.titulo}}</h5>
+            <p class="card-text">{{relato.texto}}</p>
+            <a href="#" class="btn btn-primary">Leer más</a>
+        </div> -->
+    <!-- Modal -->
+    <!-- <div class="modal fade" [attr.id]="'mimodal'+i" tabindex="-1" role="dialog"
+            [attr.aria-labelledby]="'mimodalLabel'+i" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" [attr.id]="'mimodalLabel'+i">{{ relato.titulo }}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        {{ relato.texto }}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div> -->
 </div>

@@ -13,6 +13,7 @@ font-family: 'Numans', sans-serif;
 .container{
 height: 100%;
 align-content: center;
+padding: 40px;
 }
 
 .card{
@@ -54,7 +55,6 @@ border:0 !important;
 input:focus{
 outline: 0 0 0 0  !important;
 box-shadow: 0 0 0 0 !important;
-
 }
 
 .remember{

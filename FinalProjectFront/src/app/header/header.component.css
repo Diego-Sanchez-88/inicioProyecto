@@ -9,6 +9,11 @@ body{
     height: 60px;
 } */
 
+.logo{
+    font-family: 'Courier New', Courier, cursive;
+    /* esto es una puta mierda */
+}
+
 .container{
     width: 100%;
     /* background-color: gainsboro; */
@@ -52,6 +57,11 @@ nav a:hover{
     color:black;
     background-color: #ffffff81;
     transition: 1s;
+}
+
+#btnRegistro{
+    background-color: seashell;
+    border-radius: 10px;
 }
 
 

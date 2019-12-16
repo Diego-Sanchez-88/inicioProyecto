@@ -2,7 +2,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
     <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">LOGO LOGO</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top" id="logo">www.escribe-conmigo.es</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
             data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -16,14 +16,14 @@
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" [routerLink]="['/leer-relatos']">Relatos</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" [routerLink]="['/registro-usuario']">Registro</a>
+                <li class="nav-item" id="btnRegistro">
+                    <a class="nav-link js-scroll-trigger" [routerLink]="['/registro-usuario2']">Registro</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" [routerLink]="['/login']">Login</a>
-                </li>
+                </li> -->
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" [routerLink]="['/perfil']">Perfil</a>
+                    <a class="nav-link js-scroll-trigger" [routerLink]="['/perfil/relatos']">Mi perfil</a>
                 </li>
             </ul>
         </div>

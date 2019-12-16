@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
         } else {
           localStorage.setItem('user-token', res['success']);
           // alert('login correcto');
-          this.router.navigate(['/perfil']);
+          this.router.navigate(['/perfil/relatos']);
         }
       }).catch(err => {
         console.log(err);

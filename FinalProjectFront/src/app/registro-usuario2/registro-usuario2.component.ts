@@ -4,16 +4,15 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-registro-usuario',
-  templateUrl: './registro-usuario.component.html',
-  styleUrls: ['./registro-usuario.component.css']
+  selector: 'app-registro-usuario2',
+  templateUrl: './registro-usuario2.component.html',
+  styleUrls: ['./registro-usuario2.component.css']
 })
-export class RegistroUsuarioComponent implements OnInit {
+export class RegistroUsuario2Component implements OnInit {
 
   formulario: FormGroup;
 
   constructor(private datosService: DatosService, private router: Router) {
-
     this.formulario = new FormGroup({
       nombre: new FormControl('', [Validators.required]),
       username: new FormControl('', [Validators.required]),

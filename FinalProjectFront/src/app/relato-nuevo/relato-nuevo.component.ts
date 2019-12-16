@@ -24,10 +24,11 @@ export class RelatoNuevoComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.formulario.value);
+    // console.log(this.formulario.value);
     this.datosService.nuevoRelato(this.formulario.value)
       .then(res => {
-        this.router.navigate(['/perfil']);
+        console.log(res);
+        this.router.navigate(['/perfil/relatos']);
       });
   }
 }
