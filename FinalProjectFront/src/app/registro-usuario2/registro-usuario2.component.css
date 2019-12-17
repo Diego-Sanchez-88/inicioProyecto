@@ -33,12 +33,20 @@ textarea{
 }
 
 .guardar_btn{
-color: black;
+/* color: black;
 background-color: gainsboro;
-width: 100px;
+width: 100px; */
+/* padding: 10px 24px; */
+    border-radius: 8px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    float: right;
 }
 
 .guardar_btn:hover{
-color: black;
-background-color: white;
+/* color: black;
+background-color: white; */
+  background-color: rgb(175, 135, 76); 
+  color: white;
 }
+

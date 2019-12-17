@@ -18,7 +18,7 @@
 /* Style the accordion panel. Note: hidden by default */
 .panel {
   padding: 0 18px;
-  background-color: white;
+  background-color: gainsboro;
   display: none;
   overflow: hidden;
 } 
@@ -30,4 +30,14 @@
 #btnBorrarRelato{
     float: right;
     margin: 20px;
+}
+
+#btnBorrarRelato button{
+    border-radius: 8px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+#btnBorrarRelato button:hover{
+  background-color: rgb(175, 135, 76); 
+  color: white;
 }

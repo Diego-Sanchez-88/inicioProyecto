@@ -78,6 +78,15 @@ export class DatosService {
     };
     return this.http.post<any>(`${this.baseUrl}usuario/update`, values, httpOptions).toPromise();
   }
+
+  eliminarUsuario(): Promise<any> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'user-token': localStorage.getItem('user-token')
+      })
+    };
+    return this.http.post<any>(`${this.baseUrl}usuario/eliminar`, httpOptions).toPromise();
+  }
 }
 
 

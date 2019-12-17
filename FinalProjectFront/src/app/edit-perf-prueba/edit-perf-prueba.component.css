@@ -36,9 +36,29 @@ textarea{
 color: black;
 background-color: gainsboro;
 width: 100px;
+border-radius: 8px;
+-webkit-transition-duration: 0.4s; /* Safari */
+transition-duration: 0.4s;
+  
+}
+.guardar_btn:hover{
+  background-color: rgb(175, 135, 76); 
+  color: white;
 }
 
-.guardar_btn:hover{
-color: black;
-background-color: white;
+.btnEliminar{
+    margin: 20px;
+    border-radius: 8px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    color: black;
+    background-color: gainsboro;
+}
+.btnEliminar:hover{
+    background-color: rgb(175, 135, 76); 
+    color: white;
+}
+
+hr{
+    border: 1px solid white;
 }

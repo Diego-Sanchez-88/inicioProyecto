@@ -58,6 +58,19 @@ h6{
     border-radius: 10px;
 }
 
+.buscadores button{
+    /* padding: 10px 24px; */
+    border-radius: 8px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.buscadores button:hover {
+    background-color: rgba(175, 112, 76, 0.993); 
+    color: white;
+}
+
+
 .buscarPorGenero{
     display: inline-block;
     width: 30%;

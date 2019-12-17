@@ -1,1 +1,9 @@
-<h1>¿Tienes la total certeza de que quieres hacer esto?</h1>
+<div class="container">
+    <div class="fondo">
+        <h2>¿Tienes la total certeza de que quieres hacer esto?</h2>
+        <div class="botones">
+            <button type="text" (click)="eliminarUsuario()">SÍ</button>
+            <button type="text" [routerLink]="['/perfil']">NO</button>
+        </div>
+    </div>
+</div>

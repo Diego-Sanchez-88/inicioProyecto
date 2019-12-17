@@ -1,5 +1,6 @@
 .container{
     display: flex;
+    margin: 50px;
 }
 
 .image{
@@ -14,13 +15,13 @@ img{
 }
 
 .perfilUsuario{
-    min-width: 200px auto;
+    min-width: 400px;
     min-height: 500px;
     margin: 30px;
-    margin-left: 0px;
-    padding: 20px;
+    /* margin-left: 0px; */
+    padding: 40px;
     /* background-color: burlywood; */
-    float: left;
+    /* float: left; */
     border-radius: 5px;
     background: rgba(0, 0, 0, 0.5);
     color: wheat;
@@ -42,12 +43,39 @@ h6{
     color: wheat;
 }
 
+#form_button{
+    margin: 10px;
+    border-radius: 8px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    float: right;
+    width: 135px;
+}
+#form_button:hover{
+    background-color: rgb(175, 135, 76); 
+    color: white;
+}
+
+
+#btnCerrarSesion{
+    margin: 10px;
+    border-radius: 8px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    float: right;
+    width: 135px;
+}
+#btnCerrarSesion:hover{
+    background-color: rgb(175, 135, 76); 
+    color: white;
+}
+
 .relatosUsuario h2{
     text-align: center;
 }
 
 .btnSubirRelato{
-    padding: 10px 24px;
+    /* padding: 10px 24px; */
     border-radius: 8px;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
@@ -55,7 +83,7 @@ h6{
 }
 
 .btnSubirRelato:hover {
-  background-color: #4CAF50; /* Green */
+  background-color: rgb(175, 135, 76); 
   color: white;
 }
 

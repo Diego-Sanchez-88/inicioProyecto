@@ -22,17 +22,13 @@
         <h5>{{ usuario.email }}</h5>
         Edad:
         <h5>{{ usuario.edad }} años</h5>
-        Géneros:
+        <!-- Géneros: -->
         <br>
         <!-- <button type="button" [routerLink]="['/editar-perfil']">EDITAR PERFIL</button> -->
+        <hr>
         <div class="submit" id="btnRegistro">
-            <div class="submit" id="btnRegistro">
-                <input type="submit" value="editar perfil" id="form_button" [routerLink]="['/edit-perf-prueba']" />
-            </div>
-            <br>
-            <hr>
-            <br>
-            <button type="button" (click)="cerrarSesion()">CERRAR SESIÓN</button>
+            <input type="submit" value="editar perfil" id="form_button" [routerLink]="['/edit-perf-prueba']" />
+            <button type="button" (click)="cerrarSesion()" id="btnCerrarSesion">CERRAR SESIÓN</button>
         </div>
     </div>
     <div class="relatosUsuario">
@@ -40,7 +36,7 @@
             <h2>MIS RELATOS</h2>
         </div>
         <div>
-            <button type="button" (click)="onSubirRelato()">Subir relato</button>
+            <button type="button" (click)="onSubirRelato()" class="btnSubirRelato">Subir relato</button>
             <br>
             <router-outlet></router-outlet>
             <!-- <p *ngIf="mostrarTextArea">
