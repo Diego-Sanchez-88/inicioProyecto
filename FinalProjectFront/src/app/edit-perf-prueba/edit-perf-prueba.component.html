@@ -6,31 +6,34 @@
                 <h6>(Debes rellenar todos los campos)</h6>
             </div>
             <div class="card-body">
-                <form #formulario="ngForm" (ngSubmit)="onSubmit(formulario.value)">
+                <form [formGroup]="formulario" (ngSubmit)="onSubmit(formulario.value)" class="form">
                     <div class="input-group form-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Nuevo nombre" name="nuevoNombre" ngModel>
+                        <input type="text" class="form-control" placeholder="Nuevo nombre" formControlName="nombre"
+                            required>
                     </div>
                     <div class="input-group form-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Nuevo username" name="nuevoUsername"
-                            ngModel>
+                        <input type="text" class="form-control" placeholder="Nuevo username" formControlName="username"
+                            required>
                     </div>
                     <div class="input-group form-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-key"></i></span>
                         </div>
-                        <input type="email" class="form-control" placeholder="Nuevo email" name="nuevoEmail" ngModel>
+                        <input type="email" class="form-control" placeholder="Nuevo email" formControlName="email"
+                            required>
                     </div>
                     <div class="input-group form-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Nueva edad" name="nuevaEdad" ngModel>
+                        <input type="text" class="form-control" placeholder="Nueva edad" formControlName="edad"
+                            required>
                     </div>
                     <div class="input-group form-group">
                         <!-- <div class="input-group-prepend">
@@ -45,30 +48,25 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                         </div>
-                        <input type="password" class="form-control" placeholder="Password actual" name="passwordActual"
-                            ngModel>
+                        <input type="password" class="form-control" placeholder="Password actual"
+                            formControlName="password" required>
                     </div>
                     <div class="input-group form-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                         </div>
-                        <input type="password" class="form-control" placeholder="Nueva password" name="nuevaPassword"
-                            ngModel>
+                        <input type="password" class="form-control" placeholder="Nueva password"
+                            formControlName="nuevaPassword" required>
                     </div>
                     <div class="input-group form-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                         </div>
                         <input type="password" class="form-control" placeholder="Repite la nueva password"
-                            name="repiteNuevaPassword" ngModel>
+                            formControlName="repiteNuevaPassword" required>
                     </div>
                     <div class="form-group">
                         <input type="submit" value="Guardar" class="btn float-right guardar_btn">
-                    </div>
-
-                    <div *ngIf="loginIncorrecto" class="d-flex justify-content-center links">
-                        Username/password incorrecto.
-                        <!-- ESTO NO TENGO NI PUTA IDEA DE CÓMO PONERLO -->
                     </div>
 
                 </form>

@@ -69,6 +69,15 @@ export class DatosService {
     };
     return this.http.post(`${this.baseUrl}relato/borrar`, { id: pRelatoId }, httpOptions).toPromise();
   }
+
+  getUsuarioActualizado(values): Promise<any> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'user-token': localStorage.getItem('user-token')
+      })
+    };
+    return this.http.post<any>(`${this.baseUrl}usuario/update`, values, httpOptions).toPromise();
+  }
 }
 
 

@@ -29,7 +29,7 @@ export class PerfilComponent implements OnInit {
 
         });
     } else {
-      this.router.navigate(['/login'])
+      this.router.navigate(['/login']);
     }
   }
 

@@ -14,11 +14,11 @@ export class EditPerfPruebaComponent implements OnInit {
 
   constructor(private datosService: DatosService, private router: Router) {
     this.formulario = new FormGroup({
-      nuevoNombre: new FormControl('', [Validators.required]),
-      nuevoUsername: new FormControl('', [Validators.required]),
-      nuevoEmail: new FormControl('', [Validators.pattern(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)]),
-      nuevaEdad: new FormControl('', [Validators.required]),
-      passwordActual: new FormControl(''),
+      nombre: new FormControl('', [Validators.required]),
+      username: new FormControl('', [Validators.required]),
+      email: new FormControl('', [Validators.pattern(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)]),
+      edad: new FormControl('', [Validators.required]),
+      password: new FormControl(''),
       nuevaPassword: new FormControl(''),
       repiteNuevaPassword: new FormControl('')
     },
@@ -26,6 +26,15 @@ export class EditPerfPruebaComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  onSubmit() {
+    // console.log(this.formulario.value); // --> correcto. Devuelve los datos de los campos.
+    this.datosService.getUsuarioActualizado(this.formulario.value)
+      .then(res => {
+        // console.log(res);
+        this.router.navigate(['/perfil']);
+      });
   }
 
   passwordValidator(form: FormGroup) {
