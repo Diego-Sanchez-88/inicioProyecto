@@ -16,7 +16,7 @@ export class RelatoNuevoComponent implements OnInit {
     this.formulario = new FormGroup({
       titulo: new FormControl(''),
       texto: new FormControl(''),
-      etiquetas: new FormControl('')
+      genero: new FormControl('')
     });
   }
 

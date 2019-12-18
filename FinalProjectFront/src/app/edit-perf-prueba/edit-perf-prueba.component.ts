@@ -33,7 +33,7 @@ export class EditPerfPruebaComponent implements OnInit {
     this.datosService.getUsuarioActualizado(this.formulario.value)
       .then(res => {
         // console.log(res);
-        this.router.navigate(['/perfil']);
+        this.router.navigate(['/perfil/relatos']);
       });
   }
 
@@ -48,5 +48,6 @@ export class EditPerfPruebaComponent implements OnInit {
       return { passwordvalidator: true };
     }
   }
+
 
 }

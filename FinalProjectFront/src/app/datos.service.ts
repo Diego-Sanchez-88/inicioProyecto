@@ -79,14 +79,23 @@ export class DatosService {
     return this.http.post<any>(`${this.baseUrl}usuario/update`, values, httpOptions).toPromise();
   }
 
-  eliminarUsuario(): Promise<any> {
+  eliminarUsuario(pUsuarioId): Promise<any> {
     const httpOptions = {
       headers: new HttpHeaders({
         'user-token': localStorage.getItem('user-token')
       })
     };
-    return this.http.post<any>(`${this.baseUrl}usuario/eliminar`, httpOptions).toPromise();
+    return this.http.post<any>(`${this.baseUrl}usuario/eliminar`, { id: pUsuarioId }, httpOptions).toPromise();
   }
+
+  buscarPorGenero(value): Promise<any> {
+    return this.http.post<any>(`${this.baseUrl}relato/genero`, value).toPromise();
+  }
+
+  buscarPorUsername(pUsuarioUsername): Promise<any> {
+    return this.http.post<any>(`${this.baseUrl}usuario/username`, { username: pUsuarioUsername }).toPromise();
+  }
+
 }
 
 

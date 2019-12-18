@@ -1,29 +1,46 @@
 <div class="container-fluid">
     <div class="buscadores">
         <div class="buscarPorGenero">
-            <form class="form-inline">
-                <input class="form-control mr-sm-2" type="search" placeholder="buscarPorGenero" aria-label="Search">
-                <button class="btn float-right search_btn my-2 my-sm-0" type="submit">Search</button>
+            <form class="form-inline" #buscarPorGenero="ngForm" (ngSubmit)="onSubmitGenero(buscarPorGenero.value)">
+                <!-- <input class="form-control mr-sm-2" type="search" placeholder="buscarPorGenero" aria-label="Search"> -->
+                <select name="" id="" class="form-control" name="genero" ngModel>
+                    <option value="buscarPorGenero">Buscar por género</option>
+                    <option value="biografia">Biografía</option>
+                    <option value="terror">Terror</option>
+                    <option value="historia">Historia</option>
+                    <option value="cienciaFiccion">Cuencia ficción</option>
+                    <option value="divulgacion">Divulgación</option>
+                    <option value="romantica">Romántica</option>
+                    <option value="aventuras">Aventuras</option>
+                    <option value="policiaca">Policíaca</option>
+                    <option value="cuento">Cuento</option>
+                    <option value="fantasia">Fantasía</option>
+                    <option value="nautica">Náutica</option>
+                    <option value="social">Social</option>
+                </select>
+                <button class="btn float-right search_btn my-2 my-sm-0" type="submit">Buscar</button>
             </form>
         </div>
-        <div class="buscarPorPalabraClave">
+        <!-- <div class="buscarPorPalabraClave">
             <form class="form-inline">
                 <input class="form-control mr-sm-2" type="search" placeholder="buscarPorPalabraClave"
                     aria-label="Search">
-                <button class="btn float-right search_btn my-2 my-sm-0" type="submit">Search</button>
+                <button class="btn float-right search_btn my-2 my-sm-0" type="submit">Buscar</button>
             </form>
-        </div>
+        </div> -->
         <div class="buscarPorUsername">
-            <form class="form-inline">
-                <input class="form-control mr-sm-2" type="search" placeholder="buscarPorUsername" aria-label="Search">
-                <button class="btn float-right search_btn my-2 my-sm-0" type="submit">Search</button>
+            <form class="form-inline" #buscarPorUsername="ngForm"
+                (ngSubmit)="onSubmitUsername(buscarPorUsername.value)">
+                <input class="form-control mr-sm-2" type="search" placeholder="buscarPorUsername" name="username"
+                    ngModel>
+                <button class="btn float-right search_btn my-2 my-sm-0" type="submit">Buscar</button>
             </form>
         </div>
     </div>
 
     <div class="containerRow">
         <div class="row">
-            <div class="col-md-3" *ngFor="let relato of arrRelatos, let i= index">
+            <div class="col-md-3" *ngFor="let relato of arrRelatos; let i= index">
                 <div class="wrapper-relato mb-2">
                     <h3>{{ relato.titulo }}</h3>
                     <hr>
@@ -31,7 +48,7 @@
                     <!-- a estos p hay que darles un estilo de medida fija, un alto fijo, y todo lo que salga de este alto hay que darle un overflow: hidden . Limitar los caracteres en lugar de con el alto.-->
                     <a href="" data-toggle="modal" [attr.data-target]="'#mimodal'+i">Leer más/Seguir leyendo</a>
                     <div class="etiquetas">
-                        <h6>Etiquetas: {{ relato.etiquetas }}</h6>
+                        <h6>Género: {{ relato.genero }}</h6>
                     </div>
                 </div>
 
@@ -53,13 +70,13 @@
                             <div class="modal-footer">
                                 Autor/a: {{ relato.fk_usuario }}
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="scrollBtn">
         <button (click)="subirArriba()" id="scrollBtn" title="Go to top">Top ´|`</button>
     </div>

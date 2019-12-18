@@ -9,8 +9,10 @@ body{
     height: 60px;
 } */
 
-.logo{
-    font-family: 'Courier New', Courier, cursive;
+#logo{
+    font-family: 'Courier New', Courier, monospace;
+    font-family: cursive;
+    font-size: larger;
     /* esto es una puta mierda */
 }
 

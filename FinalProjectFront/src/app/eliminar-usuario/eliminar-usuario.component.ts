@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DatosService } from '../datos.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-eliminar-usuario',
@@ -8,15 +9,20 @@ import { DatosService } from '../datos.service';
 })
 export class EliminarUsuarioComponent implements OnInit {
 
-  constructor(private datosService: DatosService) { }
+  constructor(private datosService: DatosService, private router: Router) { }
 
   ngOnInit() {
   }
 
-  eliminarUsuario() {
-    this.datosService.eliminarUsuario()
+  borrarUsuario(pUsuarioId) {
+    console.log(pUsuarioId);  // --> undefined
+    // console.log('a borrá');  // --> funciona
+    this.datosService.eliminarUsuario(pUsuarioId)
       .then(res => {
-        console.log(res);
-      })
+        localStorage.removeItem('user-token');
+        this.router.navigate(['/home']);
+      }).catch(err => {
+        console.log(err);
+      });
   }
 }

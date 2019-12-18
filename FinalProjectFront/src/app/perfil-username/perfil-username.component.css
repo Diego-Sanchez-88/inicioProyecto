@@ -1,0 +1,100 @@
+.container{
+    display: flex;
+    margin: 50px;
+}
+
+.image{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+img{
+    border-radius: 50%;
+    width: 150px;
+    height: auto;
+}
+
+.perfilUsuario{
+    min-width: 400px;
+    min-height: 500px;
+    margin: 30px;
+    /* margin-left: 0px; */
+    padding: 40px;
+    /* background-color: burlywood; */
+    /* float: left; */
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    color: wheat;
+}
+
+.perfilUsuario h5{
+    margin-left: 20px;
+}
+
+.relatosUsername{
+    min-width: 850px;
+    min-height: 600px;
+    margin: 30px;
+    padding: 30px;
+    /* background-color: burlywood; */
+    float: right;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    color: wheat;
+}
+
+.relatosUsername h2{
+    text-align: center;
+    color: wheat;
+    margin: 0 0 20px 0;
+}
+
+hr{
+    background-color: gainsboro;
+}
+
+#message{
+    text-align: center;
+}
+
+#btnMessage{
+color: black;
+background-color: gainsboro;
+/* width: 100px; */
+padding: 0;
+margin: 10px;
+border-radius: 8px;
+transition-duration: 0.4s;
+float: right;
+width: 135px;
+cursor: pointer;
+}
+
+#btnMessage:hover{
+color: black;
+background-color: #FD882C;
+}
+
+.accordion {
+  background-color:transparent;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+} 
+.btn-link{
+  color: black;
+}
+
+.genero{
+  width: 300px;
+  float: left;
+  position: relative; 
+  margin: 20px;
+  font-style: italic;
+}
+

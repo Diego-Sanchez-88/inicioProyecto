@@ -27,9 +27,13 @@ img{
     color: wheat;
 }
 
-h6{
+.perfilUsuario h5{
     margin-left: 20px;
 }
+
+/* h6{
+    margin-left: 20px;
+} */
 
 .relatosUsuario{
     min-width: 850px;
@@ -44,7 +48,7 @@ h6{
 }
 
 #form_button{
-    margin: 10px;
+    margin: 12px;
     border-radius: 8px;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
@@ -58,7 +62,7 @@ h6{
 
 
 #btnCerrarSesion{
-    margin: 10px;
+    margin: 12px;
     border-radius: 8px;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
@@ -80,6 +84,7 @@ h6{
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     float: right;
+    margin-right: 18px;
 }
 
 .btnSubirRelato:hover {

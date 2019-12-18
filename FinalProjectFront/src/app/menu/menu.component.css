@@ -1,33 +1,39 @@
-
+.container{
+  height: 80%;
+}
 
 #citadiaria{
   height: 300px;
   width: 450px;
   background-color: gray;
-  opacity:0.5; 
+  opacity:0.8; 
   float: right;
-  margin: 50px;
+  margin: 30px;
+  margin-top: 80px;
   padding: 20px;
   font-style: italic;
   font-family: 'Courier New', Courier, monospace;
   color: black;
+  float: left;
+  font-weight: bolder;
 }
 
 
 #elh3{
   width: 50%;
   color: white;
-  margin-top: 100px;
+  margin-top: 80px;
   width: 400px;
+  float: right;
 }
 
 h3{
   font-family: cursive;
 }
-/* 
+
 .containerLogin{
-  
-} */
+  padding: 0;
+} 
 
 
 

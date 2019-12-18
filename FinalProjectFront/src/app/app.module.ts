@@ -16,6 +16,8 @@ import { AcordeonRelatosComponent } from './acordeon-relatos/acordeon-relatos.co
 import { EditPerfPruebaComponent } from './edit-perf-prueba/edit-perf-prueba.component';
 import { RegistroUsuario2Component } from './registro-usuario2/registro-usuario2.component';
 import { EliminarUsuarioComponent } from './eliminar-usuario/eliminar-usuario.component';
+import { LeerRelatosGeneroComponent } from './leer-relatos-genero/leer-relatos-genero.component';
+import { PerfilUsernameComponent } from './perfil-username/perfil-username.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { EliminarUsuarioComponent } from './eliminar-usuario/eliminar-usuario.co
     AcordeonRelatosComponent,
     EditPerfPruebaComponent,
     RegistroUsuario2Component,
-    EliminarUsuarioComponent
+    EliminarUsuarioComponent,
+    LeerRelatosGeneroComponent,
+    PerfilUsernameComponent
   ],
   imports: [
     BrowserModule,

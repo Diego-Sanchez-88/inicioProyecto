@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Numans');
 
 html,body{
-background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+
 background-size: cover;
 background-repeat: no-repeat;
 height: 100%;
@@ -33,14 +33,14 @@ textarea{
 }
 
 .guardar_btn{
-/* color: black;
-background-color: gainsboro;
-width: 100px; */
-/* padding: 10px 24px; */
-    border-radius: 8px;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    float: right;
+  color: black;
+  background-color: gainsboro;
+  width: 100px;
+  /* padding: 10px 24px; */
+  border-radius: 8px;
+  /* -webkit-transition-duration: 0.4s; 
+  transition-duration: 0.4s; */
+  float: right;
 }
 
 .guardar_btn:hover{

@@ -1,0 +1,61 @@
+<div class="container" *ngIf="usuario">
+
+    <div class="perfilUsuario">
+        <div class="image">
+            <img src="../../assets/usuario_pulpo.png" alt="">
+        </div>
+
+        <i>Nombre:</i>
+        <h5>{{ usuario.nombre }}</h5>
+        <i>Username:</i>
+        <h5>{{ usuario.username }}</h5>
+        <i>E-mail:</i>
+        <h5>{{ usuario.email }}</h5>
+        <i>Edad:</i>
+        <h5>{{ usuario.edad }} años</h5>
+
+        <br>
+        <hr>
+        <div class="enviarMensaje">
+            <textarea name="enviarMensaje" id="message" cols="42" rows="10"></textarea>
+            <button class="btn float-right search_btn my-2 my-sm-0" type="submit" id="btnMessage">Envíale un
+                mensaje</button>
+        </div>
+    </div>
+
+
+    <div class="relatosUsername">
+        <div>
+            <h2>SUS RELATOS</h2>
+        </div>
+
+        <div class="accordion" id="accordionExample">
+            <div class="card" *ngFor="let relato of arrRelatosUsername, let i = index">
+                <div class="card-header" [attr.id]="'heading'+i">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse"
+                            [attr.data-target]="'#collapse'+i" aria-expanded="false"
+                            [attr.aria-controls]="'collapse'+i">
+                            {{ relato.titulo }}
+                        </button>
+                    </h2>
+                </div>
+
+                <div [attr.id]="'collapse'+i" class="collapse hidden" [attr.aria-labelledby]="'heading'+i"
+                    data-parent="#accordionExample">
+                    <div class="card-body">
+                        {{ relato.texto }}
+                    </div>
+                    <div class="footer">
+                        <div class="genero">
+                            Género: {{ relato.genero }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>

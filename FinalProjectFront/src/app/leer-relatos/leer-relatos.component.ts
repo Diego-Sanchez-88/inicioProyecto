@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DatosService } from '../datos.service';
+import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-leer-relatos',
@@ -10,7 +12,7 @@ export class LeerRelatosComponent implements OnInit {
 
   arrRelatos: any[];
 
-  constructor(private datosService: DatosService) {
+  constructor(private datosService: DatosService, private router: Router) {
     this.arrRelatos = [];
   }
 
@@ -20,7 +22,6 @@ export class LeerRelatosComponent implements OnInit {
         // console.log(response); // --> funciona en el terminal web
         this.arrRelatos = response;
         // console.log(response);
-        this.arrRelatos.unshift([response]);
       });
   }
 
@@ -34,6 +35,22 @@ export class LeerRelatosComponent implements OnInit {
         window.clearInterval(scrollToTop);
       }
     }, 16);
+  }
+
+  onSubmitGenero(value) {
+    // console.log('value'); // el botoncito funciona, pero no devuelve nada.
+    // console.log(value); // ahora sí devuelve lo que debe.
+    this.datosService.buscarPorGenero(value)
+      .then(response => {
+        // console.log(response); // funciona, devuelve un objeto
+        this.arrRelatos = response;
+      });
+  }
+
+  onSubmitUsername(value) {
+    // console.log('clicka?'); // sí clicka
+    console.log(value); // --> devuelve json vacío
+    this.router.navigate(['/perfil-username', value.username]);
   }
 
 }
