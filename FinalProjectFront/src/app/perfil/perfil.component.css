@@ -96,4 +96,21 @@ hr{
     background-color: gainsboro;
 }
 
+.btnMensajes{
+    text-align: center;
+    margin-top: 30px;
+}
+
+#misMensajes{
+    /* padding: 10px 24px; */
+    border-radius: 8px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+#misMensajes:hover {
+    background-color: rgba(175, 112, 76, 0.993); 
+    color: white;
+}
+
 

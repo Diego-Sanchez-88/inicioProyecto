@@ -4,7 +4,7 @@
             <form class="form-inline" #buscarPorGenero="ngForm" (ngSubmit)="onSubmitGenero(buscarPorGenero.value)">
                 <!-- <input class="form-control mr-sm-2" type="search" placeholder="buscarPorGenero" aria-label="Search"> -->
                 <select name="" id="" class="form-control" name="genero" ngModel>
-                    <option value="buscarPorGenero">Buscar por género</option>
+                    <option value="" disabled selected>Selecciona una opción</option>
                     <option value="biografia">Biografía</option>
                     <option value="terror">Terror</option>
                     <option value="historia">Historia</option>
@@ -31,7 +31,7 @@
         <div class="buscarPorUsername">
             <form class="form-inline" #buscarPorUsername="ngForm"
                 (ngSubmit)="onSubmitUsername(buscarPorUsername.value)">
-                <input class="form-control mr-sm-2" type="search" placeholder="buscarPorUsername" name="username"
+                <input class="form-control mr-sm-2" type="search" placeholder="Buscar por username" name="username"
                     ngModel>
                 <button class="btn float-right search_btn my-2 my-sm-0" type="submit">Buscar</button>
             </form>
