@@ -41,6 +41,7 @@ textarea{
   /* -webkit-transition-duration: 0.4s; 
   transition-duration: 0.4s; */
   float: right;
+  cursor: pointer;
 }
 
 .guardar_btn:hover{

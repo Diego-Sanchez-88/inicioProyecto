@@ -49,7 +49,7 @@ export class LeerRelatosComponent implements OnInit {
 
   onSubmitUsername(value) {
     // console.log('clicka?'); // sí clicka
-    console.log(value); // --> devuelve json vacío
+    // console.log(value); // --> devuelve json vacío
     this.router.navigate(['/perfil-username', value.username]);
   }
 

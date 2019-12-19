@@ -85,6 +85,7 @@ img{
     transition-duration: 0.4s;
     float: right;
     margin-right: 18px;
+    width: 135px;
 }
 
 .btnSubirRelato:hover {

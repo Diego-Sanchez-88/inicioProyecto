@@ -8,7 +8,7 @@
                     <option value="biografia">Biografía</option>
                     <option value="terror">Terror</option>
                     <option value="historia">Historia</option>
-                    <option value="cienciaFiccion">Cuencia ficción</option>
+                    <option value="cienciaFiccion">Ciencia ficción</option>
                     <option value="divulgacion">Divulgación</option>
                     <option value="romantica">Romántica</option>
                     <option value="aventuras">Aventuras</option>
@@ -46,7 +46,7 @@
                     <hr>
                     <p class="card-body">{{ relato.texto }}</p>
                     <!-- a estos p hay que darles un estilo de medida fija, un alto fijo, y todo lo que salga de este alto hay que darle un overflow: hidden . Limitar los caracteres en lugar de con el alto.-->
-                    <a href="" data-toggle="modal" [attr.data-target]="'#mimodal'+i">Leer más/Seguir leyendo</a>
+                    <a href="" data-toggle="modal" [attr.data-target]="'#mimodal'+i">Seguir leyendo</a>
                     <div class="etiquetas">
                         <h6>Género: {{ relato.genero }}</h6>
                     </div>
@@ -78,7 +78,7 @@
     </div>
 
     <div class="scrollBtn">
-        <button (click)="subirArriba()" id="scrollBtn" title="Go to top">Top ´|`</button>
+        <button (click)="subirArriba()" id="scrollBtn" title="Go to top">Volver arriba</button>
     </div>
     <!-- -------------------------------------------------------------------------------------------------------------------------- -->
     <!-- --------------------------------------------------------------------------------------------------------------------------- -->
